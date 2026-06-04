@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background-color: #222;
+}
+
+
+
+/* Barra de navegacion: */ 
+.nav-bar {
+    background-color: #48e;
+    margin: 0;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.list__item {
+    display: inline-block;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: 14px;
+    font-size: 23px;
+}
+
+
+
+/* Seccion principal: */
+.contenedor-imagen-portada {
+    background-color: red;                 /* modificar luego */ 
+    height: 450px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    margin: 0;
+    text-align: center;
+}
+
+.contenedor-texto {
+    background-color: orange;           /* modificar luego */
+    width: 60%;
+    margin: auto;
+}

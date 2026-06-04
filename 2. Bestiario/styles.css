@@ -1,0 +1,152 @@
+body {
+    /* Variables: */
+    --color-principal: #11111a;
+    --color-texto: #eee;
+    --color-boton-menu-lateral: #444;
+    --padding-search-bar: 5px;
+    --radio-search-bar: 15px;
+    --color-gris-metalico-1: #333441;
+
+
+
+    margin: 0;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+/* Header: ---------------------------------------------------------------------- */
+
+header {
+    background-color: var(--color-gris-metalico-1);
+    padding: 13px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__search-button__container {
+    width: 30%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__form {
+    width: 90%;
+    display: flex;
+    align-items: stretch;
+}
+
+.header__search-bar {
+    width: 100%;
+    padding: var(--padding-search-bar) 10px;
+    outline: none;
+    border-radius: var(--radio-search-bar) 0 0 var(--radio-search-bar);
+    font-size: 16px;
+    border: 2px solid #000;
+    border-right: 1px solid #000;
+    
+    flex-shrink: 1;
+}
+
+.header__search-button {
+    display: inline-block;
+    padding: 0 12px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #000;
+    border-left: 1px solid #000;
+    border-radius: 0 var(--radio-search-bar) var(--radio-search-bar) 0;
+    align-self: stretch;
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.header__search-button:hover {
+    background-color: #444;
+}
+
+.header__logo-container {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../Imagenes/icono_juego.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/* Menu lateral: */
+
+.menu-lateral-button-container {
+    background-color: transparent;        /* modificar despues */
+    display: inline-block;
+    border-radius: 7px;
+    /* position: absolute;
+    left: 20px;
+    top: 20px; */
+    color: var(--color-boton-menu-lateral);
+    border: 2px solid var(--color-boton-menu-lateral);
+}
+
+.padding-10px {
+    padding: 10px;
+}
+
+.menu-lateral {
+    display: none;                  /* modificar despues */
+}
+
+
+
+
+
+/* Main */
+
+main {
+    margin-top: 50px;
+}
+
+section {
+    width: 75%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.monster-types-buttons-container {
+    height: 70px;
+}
+
+.section__type-monsters-button {
+    width: 70%;
+}
+
+
+
+
+/* Modificadores: */
+
+.flexbox-row-space_around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
