@@ -1,17 +1,23 @@
 body {
     /* Variables: */
     --color-principal: #11111a;
-    --color-texto: #eee;
+    --color-texto-header: #eee;
     --color-boton-menu-lateral: #444;
-    --padding-search-bar: 5px;
-    --radio-search-bar: 15px;
+    --border-radius-search-bar: 25px;
     --color-gris-metalico-1: #333441;
+    --color-elementos-hover: #444;
+    --color-fondo: #FFF4C4;
+    --color-texto-principal: #222;
 
 
 
     margin: 0;
-    background-color: var(--color-principal);
-    color: var(--color-texto);
+    /* background-color: var(--color-fondo); */
+    color: var(--color-texto-header);
+
+    /* background-image: url("../Imagenes/fondo_hoja_amarrila_antigua_3.jpg");
+    background-size: cover;
+    background-attachment: fixed; */
 }
 
 ul, p {
@@ -23,62 +29,23 @@ ul {
     list-style: none;
 }
 
+li {
+    box-sizing: border-box;
+}
+
 
 
 
 /* Header: ---------------------------------------------------------------------- */
 
 header {
+    height: 40px;
+    padding: 20px 25px;
+    
     background-color: var(--color-gris-metalico-1);
-    padding: 13px 25px;
 
-    display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header__search-button__container {
-    width: 30%;
-    height: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header__form {
-    width: 90%;
-    display: flex;
-    align-items: stretch;
-}
-
-.header__search-bar {
-    width: 100%;
-    padding: var(--padding-search-bar) 10px;
-    outline: none;
-    border-radius: var(--radio-search-bar) 0 0 var(--radio-search-bar);
-    font-size: 16px;
-    border: 2px solid #000;
-    border-right: 1px solid #000;
-    
-    flex-shrink: 1;
-}
-
-.header__search-button {
-    display: inline-block;
-    padding: 0 12px;
-    background-color: transparent;
-    outline: none;
-    border: 2px solid #000;
-    border-left: 1px solid #000;
-    border-radius: 0 var(--radio-search-bar) var(--radio-search-bar) 0;
-    align-self: stretch;
-    font-size: 14px;
-    color: var(--color-texto);
-}
-
-.header__search-button:hover {
-    background-color: #444;
 }
 
 .header__logo-container {
@@ -91,29 +58,32 @@ header {
     background-repeat: no-repeat;
 }
 
+.header__nav {
+    width: 30%;
+}
 
+.header__nav__li {
+    border: 2px solid #000;
+    border-radius: 8px;
+    height: 45px;
+}
 
+.header__nav__li:hover {
+    background-color: var(--color-elementos-hover);
+}
 
+.header__nav__ul {
+    width: 100%;
+    gap: 30px;
+}
 
-/* Menu lateral: */
-
-.menu-lateral-button-container {
-    background-color: transparent;        /* modificar despues */
+.nav__link {
     display: inline-block;
-    border-radius: 7px;
-    /* position: absolute;
-    left: 20px;
-    top: 20px; */
-    color: var(--color-boton-menu-lateral);
-    border: 2px solid var(--color-boton-menu-lateral);
-}
-
-.padding-10px {
-    padding: 10px;
-}
-
-.menu-lateral {
-    display: none;                  /* modificar despues */
+    text-decoration: none;
+    font-size: 22px;            /* dar una medida relativa despues, si se puede */
+    color: var(--color-texto-header);
+    width: min-content;
+    padding: 8px 14px;
 }
 
 
@@ -123,30 +93,173 @@ header {
 /* Main */
 
 main {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    color: var(--color-texto-principal);
 }
 
 section {
-    width: 75%;
+    width: 68%;
     margin: auto;
-    padding-top: 20px;
+    background-color: var(--color-fondo);
 }
 
-.monster-types-buttons-container {
+h1 {
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 2.5px;
+    margin: 0;
+    padding-top: 70px;
+}
+
+
+
+
+
+/* Barra de busqueda */
+
+.main__search-button__container {
+    box-sizing: border-box;
+    height: 50px;
+    justify-content: center;
+}
+
+.main__form {
+    box-sizing: content-box;
+    width: 30%;
+    align-items: stretch;
+    border: 2px solid var(--color-texto-principal);
+    border-radius: var(--border-radius-search-bar);
+    background-color: var(--color-gris-metalico-1);
+}
+
+.main__search-bar, .main__search-button {
+    box-sizing: border-box;
+    height: 46px;
+}
+
+.main__search-bar {
+    width: 100%;
+    padding: 10px 13px;
+    border-radius: var(--border-radius-search-bar) 0 0 var(--border-radius-search-bar);
+    font-size: 18px;
+    border: none;
+    border-right: 1px solid var(--color-texto-principal);
+    background-color: var(--color-gris-metalico-1);
+    color: var(--color-texto-header);
+    outline: none;
+}
+
+.main__search-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid var(--color-texto-principal);
+}
+
+.main__search-button span {
+    box-sizing: border-box;
+    color: var(--color-gris-metalico-1);
+    background-color: var(--color-fondo);
+    padding: 11px 12px;
+    border-radius: 0 var(--border-radius-search-bar) var(--border-radius-search-bar) 0;
+}
+
+.main__search-button span:hover {
+    color: var(--color-texto-header);
+    background-color: var(--color-elementos-hover);
+}
+
+
+
+
+
+/* Botones de "tipo de monstruos" */
+
+.monsters-types-buttons-container {
     height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.section__type-monsters-button {
-    width: 70%;
+.monsters-types-buttons-container > div {
+    width: 30%;
+    position: relative;
+    height: 100%;
 }
+
+.monsters-types-buttons-container > div > .monsters-type-button {
+    box-sizing: border-box;
+    font-size: 30px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    /* Centrando el elemento: */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.monsters-type-button:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Grilla de "monstruos GRANDES": */
+
+.big-monsters-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 30px;
+}
+
+.grid-item {
+    background-color: #48e;     /* sacar despues */
+    border-radius: 15px;
+}
+
+.monster-image {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.monster-name {
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+
 
 
 
 
 /* Modificadores: */
 
-.flexbox-row-space_around {
+.flexbox-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+}
+
+.padding-top-bottom {
+    padding-top: 10px;
+    padding-bottom: 11px;
+}
+
+.margin-top {
+    margin-top: 80px;
 }
