@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="bestiario-grid.css">
 
+        <!-- Tipografias: -->
+        <link rel="stylesheet" href="germania_one_fonts.css">
+
         <!-- Link para iconos: -->
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     </head>
@@ -53,7 +56,7 @@
                 <!-- Barra de busqueda -->
                 <div class="main__search-button__container flexbox-row margin-top">
                     <form action="" class="main__form flexbox-row">
-                        <input type="text" class="main__search-bar" title="barra de búsqueda">
+                        <input type="text" class="main__search-bar" title="Barra de búsqueda" placeholder="Buscar">
 
                         <button class="main__search-button" title="Buscar">
                             <span class="material-symbols-outlined">search</span>
@@ -72,168 +75,226 @@
                     </div>
                 </div>
 
-                <div class="big-monsters-container margin-top">
-                    <div class="grid-item">
+
+
+                <!-- Crear botones para poder seleccionar como ordenar la grilla -->
+                <div class="orden"></div>
+
+
+
+                <div class="big-monsters-container">
+                    <div class="grid-item monster-card--ancient-forest">
                         <div class="monster-container">
-                            <div class="monster-image gran-jagras-icon"></div>
+                            <div class="monster-image gran_jagras-icon"></div>
                             <h3 class="monster-name">Gran Jagras</h3>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item monster-card--wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image kulu-ya-ku-icon"></div>
+                            <h3 class="monster-name">Kulu-Ya-Ku</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--ancient-forest">
+                        <div class="monster-container">
+                            <div class="monster-image pukei-pukei-icon"></div>
+                            <h3 class="monster-name">Pukei-Pukei</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--ancient-forest">
+                        <div class="monster-container">
+                            <div class="monster-image tobi-kadashi-icon"></div>
+                            <h3 class="monster-name">Tobi Kadashi</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--ancient-forest">
                         <div class="monster-container">
                             <div class="monster-image anjanath-icon"></div>
                             <h3 class="monster-name">Anjanath</h3>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item monster-card--ancient-forest">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
-                            <h3 class="monster-name">Nombre monstruo</h3>
+                            <div class="monster-image rathalos-icon"></div>
+                            <h3 class="monster-name">Rathalos</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image barroth-icon"></div>
+                            <h3 class="monster-name">Barroth</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image jyuratodus-icon"></div>
+                            <h3 class="monster-name">Jyuratodus</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image diablos-icon"></div>
+                            <h3 class="monster-name">Diablos</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--ancient-forest-wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image rathian-icon"></div>
+                            <h3 class="monster-name">Rathian</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--coral-highlands">
+                        <div class="monster-container">
+                            <div class="monster-image tzitzi-ya-ku-icon"></div>
+                            <h3 class="monster-name">Tzitzi-Ya-Ku</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--coral-highlands">
+                        <div class="monster-container">
+                            <div class="monster-image paolumu-icon"></div>
+                            <h3 class="monster-name">Paolumu</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--coral-highlands">
+                        <div class="monster-container">
+                            <div class="monster-image legiana-icon"></div>
+                            <h3 class="monster-name">Legiana</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--rotten-vale">
+                        <div class="monster-container">
+                            <div class="monster-image gran_girros-icon"></div>
+                            <h3 class="monster-name">Gran Girros</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--rotten-vale">
+                        <div class="monster-container">
+                            <div class="monster-image radobaan-icon"></div>
+                            <h3 class="monster-name">Radobaan</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--rotten-vale">
+                        <div class="monster-container">
+                            <div class="monster-image odogaron-icon"></div>
+                            <h3 class="monster-name">Odogaron</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image dodogama-icon"></div>
+                            <h3 class="monster-name">Dodogama</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image uragaan-icon"></div>
+                            <h3 class="monster-name">Uragaan</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image lavasioth-icon"></div>
+                            <h3 class="monster-name">Lavasioth</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image rathian_rosa-icon"></div>
+                            <h3 class="monster-name">Rathian Rosa</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image rathalos_celeste-icon"></div>
+                            <h3 class="monster-name">Rathalos Celeste</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--wildspire-waste">
+                        <div class="monster-container">
+                            <div class="monster-image diablos_negra-icon"></div>
+                            <h3 class="monster-name">Diablos Negra</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image nergigante-icon"></div>
+                            <h3 class="monster-name">Nergigante</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image teostra-icon"></div>
+                            <h3 class="monster-name">Teostra</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--elders-recess">
+                        <div class="monster-container">
+                            <div class="monster-image kushala_daora-icon"></div>
+                            <h3 class="monster-name">Kushala Daora</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--rotten-vale">
+                        <div class="monster-container">
+                            <div class="monster-image vaal_hazak-icon"></div>
+                            <h3 class="monster-name">Vaal Hazak</h3>
+                        </div>
+                    </div>
+                    <div class="grid-item monster-card--coral-highlands">
+                        <div class="monster-container">
+                            <div class="monster-image kirin-icon"></div>
+                            <h3 class="monster-name">Kirin</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
-                            <h3 class="monster-name">Nombre monstruo</h3>
+                            <div class="monster-image xenojiiva-icon"></div>
+                            <h3 class="monster-name">Xeno'jiiva</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
-                            <h3 class="monster-name">Nombre monstruo</h3>
+                            <div class="monster-image deviljho-icon"></div>
+                            <h3 class="monster-name">Deviljho</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
-                            <h3 class="monster-name">Nombre monstruo</h3>
+                            <div class="monster-image lunastra-icon"></div>
+                            <h3 class="monster-name">Lunastra</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
+                            <div class="monster-image kulve_taroth-icon"></div>
+                            <h3 class="monster-name">Kulve Taroth</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
+                            <div class="monster-image behemoth-icon"></div>
+                            <h3 class="monster-name">Behemoth</h3>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="monster-container">
-                            <div class="monster-image"></div>
+                            <div class="monster-image leshen-icon"></div>
+                            <h3 class="monster-name">Leshen</h3>
                         </div>
                     </div>
                 </div>
-
-
-
-                
-                <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid voluptate vel consequuntur nemo incidunt similique tenetur saepe ab veritatis cum eius facere distinctio iste, excepturi cupiditate sit pariatur voluptatem culpa.
-                </p>
             </section>
         </main>
 
         
 
         <footer>
-
+            <div class="metodos-contacto-container">
+                <ul class="footer__ul">
+                    <li class="footer__ul__li">elemento</li>
+                    <li class="footer__ul__li">elemento</li>
+                    <li class="footer__ul__li">elemento</li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>

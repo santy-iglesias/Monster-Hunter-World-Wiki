@@ -6,18 +6,24 @@ body {
     --border-radius-search-bar: 25px;
     --color-gris-metalico-1: #333441;
     --color-elementos-hover: #444;
-    --color-fondo: #FFF4C4;
+    --color-fondo: #D4CA98;
+    --color-grid-item-hover: #F0EBC5;
     --color-texto-principal: #222;
+
+    /* Colores relacionados a las zonas del juego: */
+    --color-ancient-forest: #107A21;
+    --color-wildspire-waste: #FFEC2E;
+    --color-coral-highlands: #41BABA;
+    --color-roten-vale: #CF276A;
+    --color-elders-recess: #566894;
 
 
 
     margin: 0;
-    /* background-color: var(--color-fondo); */
-    color: var(--color-texto-header);
-
-    /* background-image: url("../Imagenes/fondo_hoja_amarrila_antigua_3.jpg");
+    background-image: url("../Imagenes/ancient_forest_2.jpg");
     background-size: cover;
-    background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 ul, p {
@@ -46,6 +52,10 @@ header {
 
     justify-content: space-between;
     align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header__logo-container {
@@ -63,13 +73,7 @@ header {
 }
 
 .header__nav__li {
-    border: 2px solid #000;
-    border-radius: 8px;
     height: 45px;
-}
-
-.header__nav__li:hover {
-    background-color: var(--color-elementos-hover);
 }
 
 .header__nav__ul {
@@ -80,25 +84,32 @@ header {
 .nav__link {
     display: inline-block;
     text-decoration: none;
-    font-size: 22px;            /* dar una medida relativa despues, si se puede */
+    font-size: 22px;
     color: var(--color-texto-header);
     width: min-content;
     padding: 8px 14px;
+    border: 2px solid #000;
+    border-radius: 8px;
+
+    transition: background-color .2s;
+}
+
+.nav__link:hover {
+    background-color: var(--color-elementos-hover);
 }
 
 
 
 
 
-/* Main */
+/* Main: ------------------------------------------------------------------- */
 
 main {
-    /* margin-top: 50px; */
     color: var(--color-texto-principal);
 }
 
 section {
-    width: 68%;
+    width: 70%;
     margin: auto;
     background-color: var(--color-fondo);
 }
@@ -109,6 +120,7 @@ h1 {
     letter-spacing: 2.5px;
     margin: 0;
     padding-top: 70px;
+    font-family: "germania one";
 }
 
 
@@ -140,6 +152,7 @@ h1 {
 .main__search-bar {
     width: 100%;
     padding: 10px 13px;
+    padding-left: 16px;
     border-radius: var(--border-radius-search-bar) 0 0 var(--border-radius-search-bar);
     font-size: 18px;
     border: none;
@@ -162,6 +175,8 @@ h1 {
     background-color: var(--color-fondo);
     padding: 11px 12px;
     border-radius: 0 var(--border-radius-search-bar) var(--border-radius-search-bar) 0;
+
+    transition: color .2s, background-color .2s;
 }
 
 .main__search-button span:hover {
@@ -176,13 +191,12 @@ h1 {
 /* Botones de "tipo de monstruos" */
 
 .monsters-types-buttons-container {
-    height: 70px;
-    display: flex;
-    flex-direction: row;
+    height: 100px;
     justify-content: space-evenly;
 }
 
 .monsters-types-buttons-container > div {
+    box-sizing: border-box;
     width: 30%;
     position: relative;
     height: 100%;
@@ -190,10 +204,12 @@ h1 {
 
 .monsters-types-buttons-container > div > .monsters-type-button {
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 20px;
     background-color: transparent;
     border: 2px solid #000;
     border-radius: 10px;
+    width: 70%;
+    height: 60px;
 
     /* Centrando el elemento: */
     position: absolute;
@@ -220,13 +236,28 @@ h1 {
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(auto-fit , 230px);
     gap: 30px;
+    grid-auto-flow: row;
+    justify-content: center;
+    padding: 80px 0;
 }
 
 .grid-item {
-    background-color: #48e;     /* sacar despues */
     border-radius: 15px;
+    border: 2px solid #000;         /* sacar despues */
+
+    transition: background-color .4s;
+}
+
+.grid-item:hover {
+    background-color: var(--color-grid-item-hover);
+    cursor: pointer;
+}
+
+.monster-container {
+    padding-top: 9px;
+    padding-bottom: 13px;
 }
 
 .monster-image {
@@ -240,9 +271,47 @@ h1 {
 .monster-name {
     text-align: center;
     margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.monster-card--ancient-forest {
+    border: 3px solid var(--color-ancient-forest);
+}
+
+.monster-card--wildspire-waste {
+    border: 3px solid var(--color-wildspire-waste);
+}
+
+.monster-card--ancient-forest-wildspire-waste {
+    border-top: 3px solid var(--color-wildspire-waste);
+    border-right: 3px solid var(--color-wildspire-waste);
+    border-bottom: 3px solid var(--color-ancient-forest);
+    border-left: 3px solid var(--color-ancient-forest);
+}
+
+.monster-card--coral-highlands {
+    border: 3px solid var(--color-coral-highlands);
+}
+
+.monster-card--rotten-vale {
+    border: 3px solid var(--color-roten-vale);
+}
+
+.monster-card--elders-recess {
+    border: 3px solid var(--color-elders-recess);
 }
 
 
+
+
+
+/* Footer: -------------------------------------------------------------- */
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: var(--color-gris-metalico-1);
+}
 
 
 
