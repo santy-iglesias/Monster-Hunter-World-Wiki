@@ -1,0 +1,60 @@
+/* Familia: Cinzel Decorative -------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "cinzel decorative";
+    src: url("../../Tipografias/Cinzel_Decorative/CinzelDecorative-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "cinzel decorative";
+    src: url("../../Tipografias/Cinzel_Decorative/CinzelDecorative-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "cinzel decorative";
+    src: url("../../Tipografias/Cinzel_Decorative/CinzelDecorative-Black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+
+/* Familia: Germania One ------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "germania one";
+    src: url("../../Tipografias/Germania_One/GermaniaOne-Regular.ttf") format("truetype");
+    font-weight: 500;
+}
+
+
+
+/* Familia: Spectral ------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "spectral";
+    src: url("../../Tipografias/Spectral/Spectral-Medium.ttf") format("truetype");
+    font-weight: 400;
+}
+
+
+
+/* Familia: Montserrat  -------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "montserrat";
+    src: url("../../Tipografias/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("../../Tipografias/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("../../Tipografias/Montserrat/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900;
+}

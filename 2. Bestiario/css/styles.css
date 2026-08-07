@@ -2,13 +2,14 @@ body {
     /* Variables: */
     --color-principal: #11111a;
     --color-texto-header: #eee;
-    --color-boton-menu-lateral: #444;
     --border-radius-search-bar: 25px;
     --color-gris-metalico-1: #333441;
     --color-elementos-hover: #444;
-    --color-fondo: #D4CA98;
+    --color-fondo: #D1C192;
+    /* --color-fondo: #D4CA98; */
     --color-grid-item-hover: #F0EBC5;
     --color-texto-principal: #222;
+    --background-color-nav: #2B2B2B;
 
     /* Colores relacionados a las zonas del juego: */
     --color-ancient-forest: #107A21;
@@ -18,12 +19,8 @@ body {
     --color-elders-recess: #566894;
 
 
-
     margin: 0;
-    background-image: url("../Imagenes/ancient_forest_2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: var(--color-fondo);
 }
 
 ul, p {
@@ -39,19 +36,20 @@ li {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
 
 
 
-/* Header: ---------------------------------------------------------------------- */
+
+/* Header: ------------------------------------------------------------------------------------------- */
 
 header {
-    height: 40px;
-    padding: 20px 25px;
-    
-    background-color: var(--color-gris-metalico-1);
-
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
 
     position: sticky;
     top: 0;
@@ -59,50 +57,79 @@ header {
 }
 
 .header__logo-container {
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
+    height: 115px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--color-gris-metalico-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    background-image: url("../Imagenes/icono_juego.jpg");
+.header-logo {
+    width: 100%;
+    height: 95px;
+
+    background-image: url("../../Imagenes/mhw_logo.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .header__nav {
-    width: 30%;
-}
-
-.header__nav__li {
-    height: 45px;
+    background-color: var(--background-color-nav);
+    width: 100%;
+    height: 41px;
 }
 
 .header__nav__ul {
-    width: 100%;
+    justify-content: center;
     gap: 30px;
+    height: 100%;
+}
+
+.header__nav__li {
+    height: inherit;
+    box-sizing: content-box;
 }
 
 .nav__link {
+    height: 100%;
     display: inline-block;
-    text-decoration: none;
-    font-size: 22px;
-    color: var(--color-texto-header);
-    width: min-content;
-    padding: 8px 14px;
-    border: 2px solid #000;
-    border-radius: 8px;
-
+    font-size: 20px;
+    padding: 0 9px;
     transition: background-color .2s;
 }
 
 .nav__link:hover {
-    background-color: var(--color-elementos-hover);
+    background-color: #3f3f3f;
+}
+
+.nav__link div {
+    height: 100%;
+    color: var(--color-texto-header);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* position: relative; */
+}
+
+.page-icon-container, .material-symbols-outlined {
+    height: 27px;
+    width: 27px;
+}
+
+.nav__link div p {
+    padding-left: 6px;
+    font-family: "germania one";
 }
 
 
 
 
-
-/* Main: ------------------------------------------------------------------- */
+/* Main: ------------------------------------------------------------------------------------------------------- */
 
 main {
     color: var(--color-texto-principal);
@@ -120,7 +147,8 @@ h1 {
     letter-spacing: 2.5px;
     margin: 0;
     padding-top: 70px;
-    font-family: "germania one";
+    font-family: "cinzel decorative";
+    font-weight: 900;
 }
 
 
@@ -129,48 +157,53 @@ h1 {
 
 /* Barra de busqueda */
 
-.main__search-button__container {
+.main__search-bar__container {
     box-sizing: border-box;
     height: 50px;
     justify-content: center;
 }
 
 .main__form {
-    box-sizing: content-box;
-    width: 30%;
-    align-items: stretch;
+    box-sizing: border-box;
+    width: 400px;
+    height: 50px;
+    /* align-items: stretch; */
     border: 2px solid var(--color-texto-principal);
     border-radius: var(--border-radius-search-bar);
     background-color: var(--color-gris-metalico-1);
 }
 
-.main__search-bar, .main__search-button {
+.main__search-bar_input, .main__search-button {
     box-sizing: border-box;
-    height: 46px;
 }
 
-.main__search-bar {
-    width: 100%;
-    padding: 10px 13px;
-    padding-left: 16px;
-    border-radius: var(--border-radius-search-bar) 0 0 var(--border-radius-search-bar);
-    font-size: 18px;
+.main__search-bar_input {
+    width: 350px;
+    padding: 0;
     border: none;
+    font-size: 18px;
+    border-radius: var(--border-radius-search-bar) 0 0 var(--border-radius-search-bar);
+    padding-left: 16px;
+    background-color: var(--background-color-nav);
+    color: var(--color-texto-header);
     border-right: 1px solid var(--color-texto-principal);
-    background-color: var(--color-gris-metalico-1);
     color: var(--color-texto-header);
     outline: none;
 }
 
 .main__search-button {
+    width: 50px;
     padding: 0;
     background-color: transparent;
     border: none;
     border-left: 1px solid var(--color-texto-principal);
+    border-radius: 0 var(--border-radius-search-bar) var(--border-radius-search-bar) 0;
 }
 
 .main__search-button span {
     box-sizing: border-box;
+    height: 100%;
+    width: 100%;
     color: var(--color-gris-metalico-1);
     background-color: var(--color-fondo);
     padding: 11px 12px;
@@ -192,17 +225,19 @@ h1 {
 
 .monsters-types-buttons-container {
     height: 100px;
+    width: 90%;
+    margin: auto;
     justify-content: space-evenly;
 }
 
 .monsters-types-buttons-container > div {
     box-sizing: border-box;
-    width: 30%;
+    width: 40%;
     position: relative;
     height: 100%;
 }
 
-.monsters-types-buttons-container > div > .monsters-type-button {
+.monsters-type-button {
     box-sizing: border-box;
     font-size: 20px;
     background-color: transparent;
@@ -272,6 +307,9 @@ h1 {
     text-align: center;
     margin-top: 12px;
     margin-bottom: 0;
+    font-family: "germania one";
+    font-size: 19px;
+    font-weight: 700;
 }
 
 .monster-card--ancient-forest {
@@ -305,7 +343,66 @@ h1 {
 
 
 
-/* Footer: -------------------------------------------------------------- */
+/* Contenedor de infomacion del monstruo: */
+
+.detalles-monstruo {
+    /* width: 65%; */
+    box-sizing: border-box;
+    background-color: #FFF0B3;
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 25px;
+}
+
+.detalles-monstruo section {
+    background-color: #FFF0B3;
+}
+
+.monster-details-name {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "cinzel decorative";
+    font-weight: 700;
+}
+
+.monster-introduction-container {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.monster-introduction-container div {
+    display: grid;
+    grid-template-columns: minmax(400px , 3fr) minmax(350px , 500px);
+    gap: 40px;
+}
+
+.detalles-monstruo h3 {
+    font-size: 28px;
+    font-family: "montserrat";
+    font-weight: 700;
+}
+
+.monster-introduction-image {
+    background-image: url("../../Imagenes/Imagenes\ monstruos/gran_jagras.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+.monster-introduction {
+    font-size: 20px;
+    text-align: justify;
+    font-family: "montserrat";
+    font-weight: 500;
+}
+
+
+
+
+
+/* Footer: --------------------------------------------------------------------------------------------------*/
 
 footer {
     width: 100%;
@@ -317,7 +414,13 @@ footer {
 
 
 
-/* Modificadores: */
+
+
+
+
+
+
+/* Modificadores: -------------------------------------------------------------------------------------------------------*/
 
 .flexbox-row {
     display: flex;
